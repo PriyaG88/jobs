@@ -6,7 +6,7 @@ import AuthScreen from './screens/AuthScreen';
 import WelcomeScreen from './screens/WelcomeScreen';
 import MapScreen from './screens/MapScreen';
 import DeckScreen from './screens/DeckScreen';
-import SettingScreen from './screens/SettingScreen';
+import SettingsScreen from './screens/SettingsScreen';
 import ReviewScreen from './screens/ReviewScreen';
 
 export default class App extends React.Component {
@@ -21,7 +21,7 @@ export default class App extends React.Component {
           review: {
             screen: StackNavigator({
               review: { screen: ReviewScreen },
-              setting: { screen: SettingScreen }
+              settings: { screen: SettingsScreen }
             })
           }
         })
