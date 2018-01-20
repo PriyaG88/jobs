@@ -28,8 +28,15 @@ export default class App extends React.Component {
             })
           }
         })
-      }
-    });
+      },
+    },
+    {
+      navigationOptions: {
+        tabBarVisible: false
+      },
+      lazyLoad: true
+    }
+  );
 
     return (
       <Provider store={ store }>
