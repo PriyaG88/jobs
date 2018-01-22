@@ -10,6 +10,17 @@ class AuthScreen extends Component {
 
   componentDidMount() {
     this.props.facebookLogin();
+    this.onAuthComplete(this.props);
+  }
+
+  onAuthComplete(props) {
+    if (props.token) {
+      this.props.navigation.navigate('map');
+    }
+  }
+
+  componentWillReceiveProps(nextProps) {
+    this.onAuthComplete(nextProps);
   }
 
   render() {
